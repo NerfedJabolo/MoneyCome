@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/NerfedJabolo/MoneyCome/issues"
   },
-  "homepage": "https://github.com/NerfedJabolo/MoneyCome#readme"
+  "homepage": "https://github.com/NerfedJabolo/MoneyCome#readme",
+  "dependencies": {
+    "express.js": "^1.0.0",
+    "mongoose": "^7.0.0"
+  }
 }
