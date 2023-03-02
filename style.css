@@ -13,6 +13,11 @@
   --main-color: #29fd53;
 }
 
+a:hover,
+a:active {
+  color: var(--text-color);
+}
+
 body {
   min-height: 100vh;
   background-color: var(--bg-color);
@@ -20,7 +25,7 @@ body {
 }
 
 header {
-  position: fixed;
+  background-color: green;
   width: 100%;
   top: 0;
   right: 0;
@@ -58,6 +63,74 @@ header {
 
 .main a:hover {
   color: var(--main-color);
+}
+
+.head-container {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 500px;
+}
+
+.head-container > * {
+  margin: 0 20%;
+}
+
+.head-container h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 50px;
+}
+
+.head-container p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: 50px;
+}
+
+.btn > * {
+  border: none;
+  margin: 5px;
+  padding: 20px 40px;
+  border-radius: 35px;
+}
+
+.btn a {
+  color: var(--main-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+.cards-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  width: 100%;
+  isolation: isolate;
+}
+
+.cards-container h1 {
+  margin-top: 20px;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 50px;
+}
+
+.cards-container::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  transform: skewY(-5deg);
+  background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+  display: block;
+  z-index: -1;
 }
 
 @media (max-width: 1280px) {
