@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --bg-color: #222327;
+  --text-color: #fff;
+  --main-color: #29fd53;
+}
+
+a:hover,
+a:active {
+  color: var(--text-color);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 62.5%;
+}
+
+header {
+  background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.8rem 12%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  color: var(--text-color);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+}
+
+.main a {
+  position: relative;
+  display: block;
+  margin-right: 2.5rem;
+  margin-left: 1rem;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.5s ease;
+  padding: 0.2rem 0;
+  transition: all 0.5s ease;
+}
+
+.main a:hover {
+  color: var(--main-color);
+}
+
+.main span a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--main-color);
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+  transition: all 0.5s ease;
+}
+
+.main span a:hover::after {
+  transform: scale(1);
+}
+
+@media (max-width: 1280px) {
+  header {
+    padding: 14px 2%;
+    transition: 0.5s;
+  }
+}

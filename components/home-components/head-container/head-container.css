@@ -1,0 +1,63 @@
+.head-container {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50rem;
+}
+
+.head-container > * {
+  margin: 0 20%;
+}
+
+.head-container h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 5rem;
+}
+
+.head-container p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: 5rem;
+}
+
+.btn > * {
+  display: inline-block;
+  background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59) right;
+  background-size: 201%;
+  transition: 0.5s ease-out;
+  border: none;
+  margin: 0.5rem;
+  padding: 2rem 3rem;
+  border-radius: 3.5rem;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.btn > *:hover {
+  color: var(--main-color);
+  background-position: left;
+  transform: scale(1.1);
+  transition: 0.5s ease-out;
+}
+.btn a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 1024px) {
+  .head-container > * {
+    margin: 0 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .head-container > * {
+    margin: 0 10%;
+  }
+}

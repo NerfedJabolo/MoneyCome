@@ -1,0 +1,30 @@
+:root {
+  --bg-color: #222327;
+  --text-color: #fff;
+  --main-color: #29fd53;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 62.5%;
+}
+
+@media (max-width: 1280px) {
+  :root {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 75%;
+  }
+}

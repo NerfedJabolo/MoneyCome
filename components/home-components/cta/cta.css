@@ -1,0 +1,34 @@
+.sign-up {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.sign-up h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.sign-up .button {
+  display: inline-block;
+  background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59) right;
+  background-size: 201%;
+  transition: 0.5s ease-out;
+  border: none;
+  margin: 0.5rem;
+  padding: 2rem 3rem;
+  border-radius: 3.5rem;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.sign-up .button:hover {
+  color: var(--main-color);
+  background-position: left;
+  transform: scale(1.1);
+  transition: 0.5s ease-out;
+}
