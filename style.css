@@ -88,16 +88,6 @@ header {
   transform: scale(1);
 }
 
-/* .main span::after {
-  opacity: 1;
-  transform: scale(0);
-  transform-origin: center;
-}
-
-.main span:hover::after {
-  transform: scale(1);
-} */
-
 .head-container {
   display: block;
   display: flex;
