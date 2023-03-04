@@ -164,7 +164,7 @@ header {
   position: absolute;
   inset: 0;
   content: '';
-  transform: skewY(-5deg);
+  transform: skewY(-2deg);
   background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
   z-index: -1;
 }
