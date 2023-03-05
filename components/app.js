@@ -51,3 +51,19 @@ function loadFilesInSequence(files, elmnt, callback) {
 }
 
 includeHTML();
+
+document.addEventListener('click', function (event) {
+  var target = event.target;
+  if (target.tagName === 'A' && target.href !== '#') {
+    event.preventDefault();
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        document.documentElement.innerHTML = this.responseText;
+        includeHTML();
+      }
+    };
+    xhttp.open('GET', target.href, true);
+    xhttp.send();
+  }
+});
