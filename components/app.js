@@ -30,11 +30,11 @@ function loadFilesInSequence(files, elmnt, callback) {
       xhttp.onreadystatechange = function () {
         if (this.readyState == 4) {
           if (this.status == 200) {
-            elmnt.insertAdjacentHTML('afterend', this.responseText);
+            elmnt.insertAdjacentHTML('beforebegin', this.responseText);
             i++;
             next();
           } else if (this.status == 404) {
-            elmnt.insertAdjacentHTML('afterend', 'Page not found.');
+            elmnt.insertAdjacentHTML('beforebegin', 'Page not found.');
             i++;
             next();
           }
@@ -51,19 +51,3 @@ function loadFilesInSequence(files, elmnt, callback) {
 }
 
 includeHTML();
-
-document.addEventListener('click', function (event) {
-  var target = event.target;
-  if (target.tagName === 'A' && target.href !== '#') {
-    event.preventDefault();
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        document.documentElement.innerHTML = this.responseText;
-        includeHTML();
-      }
-    };
-    xhttp.open('GET', target.href, true);
-    xhttp.send();
-  }
-});
